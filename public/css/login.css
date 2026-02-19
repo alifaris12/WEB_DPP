@@ -1,0 +1,525 @@
+/* ========================================
+   Laravel Login Page CSS
+   Faculty of Economics and Business
+   ======================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #F4D03F 0%, #FFC107 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main Container */
+.login-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Decorative Circles */
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    right: -50px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 50px;
+    left: -75px;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 10%;
+}
+
+/* University Logo Section */
+.university-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.university-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #2c3e50;
+}
+
+.faculty-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Login Card */
+.login-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 450px;
+    margin: 100px auto 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.login-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Form Styles */
+.login-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: white;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+.form-control.is-invalid {
+    border: 2px solid #ff6b6b;
+}
+
+.invalid-feedback {
+    color: #ffcccc;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.remember-me label {
+    cursor: pointer;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-register {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-register:hover {
+    background: white;
+    color: #667eea;
+}
+
+.btn-login {
+    background: white;
+    color: #667eea;
+}
+
+.btn-login:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.forgot-password a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ffcccc;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.alert-success {
+    background: rgba(46, 213, 115, 0.2);
+    color: #a8f5c1;
+    border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+.alert ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.alert ul li {
+    margin-bottom: 5px;
+}
+
+.alert ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Mascot Character */
+.mascot-character {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 200px;
+    z-index: 0;
+}
+
+.mascot-character img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Additional Decorative Elements */
+.decorative-dots {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 0;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background: #1e3a8a;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.dot:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    opacity: 0.4;
+}
+
+.dot:nth-child(3) {
+    width: 12px;
+    height: 12px;
+    opacity: 0.2;
+}
+
+/* Loading Spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    .university-logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .login-card {
+        padding: 30px;
+        margin-top: 30px;
+    }
+    
+    .login-title {
+        font-size: 24px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .mascot-character {
+        width: 150px;
+        height: 150px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .decorative-dots {
+        display: none;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+    
+    .login-card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .login-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .form-control {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .mascot-character {
+        display: none;
+    }
+    
+    .university-logo img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .faculty-name {
+        font-size: 12px;
+    }
+    
+    .decorative-circle {
+        display: none;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 320px) {
+    .login-card {
+        padding: 15px;
+    }
+    
+    .login-title {
+        font-size: 18px;
+    }
+    
+    .form-control {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .login-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .mascot-character,
+    .decorative-circle,
+    .decorative-dots {
+        display: none;
+    }
+}
+
+/* Accessibility - Focus Styles */
+.form-control:focus-visible,
+.btn:focus-visible,
+.remember-me input:focus-visible,
+.forgot-password a:focus-visible {
+    outline: 3px solid #ffd700;
+    outline-offset: 2px;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

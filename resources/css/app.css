@@ -1,0 +1,9 @@
+/* Jika Anda ingin menambahkan gaya khusus untuk form atau elemen lain */
+input:focus {
+    border-color: #FFD700;
+}
+
+button:hover {
+    background-color: #FFD700;
+    transition: background-color 0.3s ease;
+}
